@@ -1,5 +1,5 @@
-import sprite
 import pygame
+from . import sprite
 
 class Scene:
   def __init__(self, game):

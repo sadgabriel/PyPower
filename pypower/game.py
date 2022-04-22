@@ -1,6 +1,6 @@
 import pygame, sys
-import scene_manager
-import scene
+from . import scene_manager
+from . import scene
 
 class Game:
   """Main Game Class"""
