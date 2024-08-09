@@ -1,2 +1,2 @@
 # PyPower
-A templete for game developing with pygame
+A tool for game developing with pygame

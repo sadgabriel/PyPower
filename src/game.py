@@ -4,9 +4,9 @@ from src import scene
 
 
 class Game:
-    def __init__(self, screen_width: int, screen_height: int, fps: int):
+    def __init__(self, screen_width: int, screen_height: int, fps: int = 60):
         if pygame.init()[1]:  # initialize pygame
-            print("Some Errors Occur on initializing pygame")
+            print("An Error Occurs while initializing pygame")
             sys.exit(-1)
 
         # set clock and fps
@@ -66,7 +66,6 @@ class Game:
         pygame.quit()
 
 
-##########TESTING
 if __name__ == "__main__":
     game = Game(1080, 720, 60)
     game.init("TestScene", scene.TestScene(game))

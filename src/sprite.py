@@ -3,8 +3,12 @@ from os import path
 from src import directory, color, utility
 
 
+class Group(pygame.sprite.LayeredDirty):
+    pass
+
+
 class Sprite(pygame.sprite.DirtySprite):
-    def __init__(self, groups=list()):
+    def __init__(self, groups: list[Group] = list()):
         super().__init__()
 
         self._parents = list(groups)
@@ -25,10 +29,6 @@ class Sprite(pygame.sprite.DirtySprite):
         """
         if not (not ignore_2 and self.dirty == 2 and dirty == 1):
             self.dirty = dirty
-
-
-class Group(pygame.sprite.LayeredDirty):
-    pass
 
 
 class Text(Sprite):
@@ -263,7 +263,7 @@ class Image(Sprite):
 
 
 class Composite(Sprite):
-    """Sprite which has other Sprites"""
+    """Sprite which can have other Sprites"""
 
     def __init__(self, left: int, top: int, width: int, height: int):
         super().__init__()

@@ -31,8 +31,8 @@ class SceneManager:
         if self.current is None:
             raise RuntimeError("SceneManager is not initialized")
 
-        if self.next is not None:
-            self._current = self._scene_dict[self.next]
+        if self.next:
+            self._current = self[self.next]
             self.next = None
 
     @property
