@@ -1,10 +1,9 @@
 import pygame
-from . import sprite
-from . import game
+from src import sprite
 
 
 class Scene:
-    def __init__(self, game: game.Game):
+    def __init__(self, game):
         self.game = game
 
         # the Group to hold all sprites
@@ -25,7 +24,7 @@ class Scene:
 
 ##########TESTING
 class TestScene(Scene):
-    def __init__(self, game: game.Game):
+    def __init__(self, game):
         super().__init__(game)
         self.text1 = sprite.Text("Text1", (120, 120), 60)
         self.text2 = sprite.Text("Text2", (120, 130), 40)

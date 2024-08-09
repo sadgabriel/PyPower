@@ -1,6 +1,6 @@
 import pygame
 import math
-from . import direction
+from src import direction
 
 
 def move_rect_by_alignment(rect, pos: tuple[int], alignment: tuple[int]):

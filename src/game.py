@@ -1,6 +1,6 @@
 import pygame, sys
-from . import scene_manager
-from . import scene
+from src import scene_manager
+from src import scene
 
 
 class Game:

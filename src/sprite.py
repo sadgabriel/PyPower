@@ -1,6 +1,6 @@
 import pygame
 from os import path
-from . import directory, color, utility
+from src import directory, color, utility
 
 
 class Sprite(pygame.sprite.DirtySprite):

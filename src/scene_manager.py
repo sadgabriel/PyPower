@@ -1,4 +1,4 @@
-from . import scene
+from src import scene
 
 
 class SceneManager:
